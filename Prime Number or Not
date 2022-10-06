@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class PrimeOrNot {
+	public static void main(String args[]) {
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter a Number : ");
+		int a = in.nextInt();
+
+		boolean flag = true;
+		for(int i=2; i<a; i++) {
+			if (a%i == 0) {
+				flag = false;
+				break;
+			}
+		}
+		if (flag == true) {
+			System.out.println(a +" is Prime Number.");
+		}
+		else {
+			System.out.println(a +" is not Prime Number.");
+		}
+	}
+}
