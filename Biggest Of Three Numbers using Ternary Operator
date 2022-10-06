@@ -1,0 +1,14 @@
+import java.util.Scanner;
+public class BiggestOf3NumbersTernary {
+	public static void main(String args[]) {
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter First Number :");
+		int a = in.nextInt();
+		System.out.println("Enter Second Number :");
+		int b = in.nextInt();
+		System.out.println("Enter Third Number :");
+		int c = in.nextInt();
+		
+		System.out.println((a>b && a>c)? (a+ " is Big.") : (b>c ? (b+ " is Big.") : (c+ " is Big.")));
+	}
+}
