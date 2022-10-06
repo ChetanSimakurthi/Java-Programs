@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class BiggestOf3Numbers {
+	public static void main(String args[]) {
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter First Number :");
+		int a = in.nextInt();
+		System.out.println("Enter Second Number :");
+		int b = in.nextInt();
+		System.out.println("Enter Third Number :");
+		int c = in.nextInt();
+		
+		if (a>b && a>c) {
+			System.out.println(a +" is Big.");
+		}
+		else if (b>c) {
+			System.out.println(b +" is Big.");
+		}
+		else {
+			System.out.println(c +" is Big.");
+		}
+	}
+}
