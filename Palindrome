@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Palindrome {
+	public static void main(String args[]) {
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter a Number = ");
+		int a = in.nextInt();
+		int copy = a;
+		int temp=0;
+		
+		while(a != 0) {
+			temp = (temp*10) + (a%10);
+			a/=10;
+		}
+		
+		if (copy == temp) {
+			System.out.println(copy +" is Palindrome Number.");
+		}
+		else {
+			System.out.println(copy +" is not Palindrome Number.");
+		}
+	}
+}
