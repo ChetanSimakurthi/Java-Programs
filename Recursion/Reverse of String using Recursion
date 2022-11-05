@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class ReverseOfStringRecursion {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String str = in.nextLine();
+        reverseOfString(str);
+    }
+    
+    public static void reverseOfString(String str) {
+        if (str.length()==0) return;
+        String res = str.substring(1);
+        reverseOfString(res);
+        System.out.print(str.charAt(0));
+    }
+}
