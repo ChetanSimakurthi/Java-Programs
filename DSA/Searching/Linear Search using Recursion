@@ -1,1 +1,44 @@
+import java.util.Scanner;
 
+public class LinearSearchRecursion {
+    public static void main(String[] args) {
+
+        // Input Section
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the Size of Array : ");
+        int n = in.nextInt();
+        System.out.println("Enter "+n +" elements : ");
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = in.nextInt();
+        }
+        System.out.println("Enter the Element you want to find : ");
+        int x = in.nextInt();
+
+        // Logic
+
+        int left = 0;
+        int right = arr.length-1;
+        int result = linearSearchRecursion(arr, left, right, x);
+        if(result == -1){
+            System.out.println("Element not Found.");
+        }
+        else{
+            System.out.println("Element "+x +" found at index : " +result);
+        }
+    }
+
+    public static int linearSearchRecursion(int[] arr, int left, int right, int x){
+
+        if(right >= left){
+            if (arr[left] == x){
+                return left;
+            }
+            else if (arr[right] == x){
+                return right;
+            }
+             return linearSearchRecursion(arr, left+1, right-1, x);
+        }
+        return -1;
+    }
+}
